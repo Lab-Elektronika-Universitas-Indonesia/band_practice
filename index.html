@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Band Practice</title>
+<meta name="description" content="Practice reading and building 4, 5 and 6 band resistor color codes.">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="board" aria-hidden="true"><img src="assets/img/pcb-traces.svg" alt=""></div>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <img src="assets/img/logo.png" alt="" width="410" height="444">
+      <div>
+      <h1><span class="grad">Band practice</span></h1>
+      <p class="sub">Read the bands, or build them from a value.</p>
+      </div>
+    </div>
+    <div class="stats" aria-live="polite">
+      <div class="stat"><b id="sStreak">0</b><span>Streak</span></div>
+      <div class="stat"><b id="sBest">0</b><span>Best streak</span></div>
+      <div class="stat"><b id="sScore">0/0</b><span>Correct</span></div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Practice mode">
+      <button data-mode="read">Read</button>
+      <button data-mode="build">Build</button>
+    </div>
+    <div class="seg" role="group" aria-label="Number of bands">
+      <button data-bands="4">4 bands</button>
+      <button data-bands="5">5 bands</button>
+      <button data-bands="6">6 bands</button>
+    </div>
+    <label class="toggle" id="flipWrap"><input type="checkbox" id="flip" checked> Flip some resistors</label>
+  </div>
+
+  <div class="stage" id="stage"></div>
+  <div class="panel" id="panel"></div>
+
+  <details>
+    <summary>Color chart</summary>
+    <div class="tablewrap"><table id="chart"></table></div>
+  </details>
+  <footer>
+    <p>Band practice, never miss it! version 1.0. Free software under the
+      <a href="LICENSE">GNU General Public License, version 3 or later</a>.
+  </footer>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
